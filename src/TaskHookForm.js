@@ -41,7 +41,7 @@ export default function TaskHookForm({ kisiler, submitFn }) {
         {errors.title && <p className="input-error">{errors.title.message}</p>}
       </div>
 
-      <div className="form-line">
+      <div className="form-line ">
         <label className="input-label" htmlFor="description">
           Açıklama
         </label>
@@ -109,7 +109,11 @@ export default function TaskHookForm({ kisiler, submitFn }) {
       </div>
 
       <div className="form-line">
-        <button className="submit-button" type="submit" disabled={!isValid}>
+        <button
+          className="submit-button t-btn"
+          type="submit"
+          disabled={!isValid}
+        >
           Kaydet
         </button>
       </div>

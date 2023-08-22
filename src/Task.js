@@ -7,7 +7,8 @@ const Task = ({ taskObj, onComplete }) => {
     <div className="task">
       <h3>{taskObj.title}</h3>
       <div className="deadline">
-        son teslim: <span>{taskObj.deadline}</span>
+        son teslim:
+        <span>{taskObj.deadline}</span>
       </div>
       <p>{taskObj.description}</p>
       <div>
