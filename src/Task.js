@@ -3,11 +3,18 @@ import { formatDistanceToNow } from "date-fns";
 import { differenceInDays } from "date-fns";
 
 const Task = ({ taskObj, onComplete }) => {
+  const result = differenceInDays(new Date(taskObj.deadline), new Date());
   return (
     <div className="task">
       <h3>{taskObj.title}</h3>
       <div className="deadline">
         son teslim:
+        <h1 className="bg-orange-800">
+          {result < 4 && <p>{result} gün sonra</p>}{" "}
+        </h1>
+        <h1 className="bg-teal-500">
+          {result > 4 && <p>{result} gün sonra</p>}
+        </h1>
         <span>{taskObj.deadline}</span>
       </div>
       <p>{taskObj.description}</p>
