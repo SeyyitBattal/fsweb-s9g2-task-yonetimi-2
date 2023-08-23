@@ -3,7 +3,9 @@
   height: 100vh;
   display: flex;
 }
-
+.deadline {
+  display: flex;
+}
 .columns {
   flex: 1;
   display: flex;
